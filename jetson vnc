@@ -1,0 +1,40 @@
+$ sudo vi /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
+
+and go ahead and add the following key into the XML file.
+
+
+<key name='enabled' type='b'>
+   <summary>Enable remote access to the desktop</summary>
+   <description>
+   If true, allows remote access to the desktop via the RFB
+   protocol. Users on remote machines may then connect to the
+   desktop using a VNC viewer.
+   </description>
+   <default>false</default>
+</key>
+
+
+Then compile the Gnome schemas with the glib-compile-schemas command.
+
+
+$ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+
+
+Startup Applications Preferences -> Add
+
+Vino
+/usr/lib/vino/vino-server
+VNC Server
+
+In treminal
+
+set org.gnome.Vino require-encryption false
+set org.gnome.Vino prompt-enabled  false
+
+(or install dconf-editor)
+
+Check
+nmap jetson
+
+
+
