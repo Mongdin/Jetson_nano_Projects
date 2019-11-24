@@ -33,8 +33,6 @@ set org.gnome.Vino prompt-enabled  false
 
 (or install dconf-editor)
 
-Check
-nmap jetson
-
+/org/gnome/desktop/remote-access
 
 
